@@ -1,0 +1,57 @@
+import React from "react";
+import { featuredInsights } from "../../mock";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function FeaturedInsights() {
+  const [hero, ...rest] = featuredInsights;
+  return (
+    <section className="py-24 lg:py-32">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="flex items-end justify-between flex-wrap gap-6 mb-14">
+          <div>
+            <div className="eyebrow mb-4">Section I · Latest Analysis</div>
+            <h2 className="font-serif text-4xl lg:text-6xl leading-[1.02] ink max-w-3xl editorial-heading">
+              Evidence-based perspectives on the forces shaping healthcare today.
+            </h2>
+          </div>
+          <Link to="/insights" className="eyebrow inline-flex items-center gap-2 ink hover:opacity-70">
+            View all insights <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid lg:grid-cols-12 gap-10">
+          <Link to={`/insights`} className="lg:col-span-7 group card-hover block">
+            <div className="relative overflow-hidden">
+              <img src={hero.image} alt={hero.title} className="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-700" />
+            </div>
+            <div className="mt-6 flex items-center gap-4 text-xs">
+              <span className="eyebrow ink">{hero.category}</span>
+              <span className="hairline flex-1" />
+              <span className="font-mono-editorial ink-muted">{hero.date} · {hero.readTime}</span>
+            </div>
+            <h3 className="font-serif text-3xl lg:text-4xl mt-4 ink leading-tight group-hover:opacity-80 transition-opacity">
+              {hero.title}
+            </h3>
+            <p className="ink-muted mt-4 max-w-2xl leading-relaxed">{hero.summary}</p>
+          </Link>
+
+          <div className="lg:col-span-5 flex flex-col divide-y divide-[#D8CFBE]">
+            {rest.slice(0, 4).map((a) => (
+              <Link to="/insights" key={a.id} className="group py-6 flex gap-5 first:pt-0 last:pb-0">
+                <img src={a.image} alt="" className="w-28 h-28 object-cover flex-shrink-0 grayscale-[10%]" />
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 text-[11px]">
+                    <span className="eyebrow ink">{a.category}</span>
+                    <span className="font-mono-editorial ink-muted">{a.readTime}</span>
+                  </div>
+                  <h4 className="font-serif text-lg mt-2 ink leading-snug group-hover:opacity-70 transition-opacity">{a.title}</h4>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
