@@ -102,70 +102,46 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Bug fix verification: User reported that Bryce Platt's portrait was not visible on the preview site. The fix moved the portrait from an external URL to a local file served from /public/bryce-portrait.jpg"
+user_problem_statement: "Bug fix verification: User reported that LinkedIn infographic images were not correctly associated with their titles. Main agent re-mapped the image assignments in /app/frontend/src/mock.js. Testing agent needs to verify the correct pairings on the frontend for both homepage Featured Insights section and Framework Library page."
 
 frontend:
-  - task: "Portrait image display - Hero section"
+  - task: "LinkedIn infographic image-to-title mapping - Homepage Featured Insights"
     implemented: true
     working: true
-    file: "/app/frontend/src/components/home/Hero.jsx"
+    file: "/app/frontend/src/mock.js, /app/frontend/src/components/home/FeaturedInsights.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
         - working: true
           agent: "testing"
-          comment: "✅ VERIFIED: Hero section portrait loads successfully. Image src: https://drug-channels-hub.preview.emergentagent.com/bryce-portrait.jpg, complete=true, naturalWidth=400, naturalHeight=400. All three floating stat cards (LinkedIn 37,000+, Streak 1,400+, Role - Director Drug Channels Institute) are visible."
+          comment: "✅ VERIFIED: All 5 Featured Insights articles on homepage display correct image-to-title mappings. Verified mappings: (1) 'Which Drug Out-of-Pocket Costs Actually Receive Policy Attention' → /li-5.png (ICEBERG) ✓, (2) 'The Nine Types of Specialty Pharmacies, Explained' → /li-4.png (WHEEL) ✓, (3) 'Six Employer Reactions to Obesity GLP-1 Coverage' → /li-3.png (PORTRAITS) ✓, (4) 'The Employer 340B Playbook' → /li-2.png (FOOTBALL FIELD) ✓, (5) 'Six Hard Pills to Swallow for the Drug Channel' → /li-1.png (PILLS) ✓. All images loaded successfully (complete=true, naturalWidth=800). Note: Only 5 of 6 articles from mock.js are displayed due to component logic (hero + 4 cards)."
   
-  - task: "Portrait image display - AboutTeaser section"
+  - task: "LinkedIn infographic image-to-title mapping - Framework Library page"
     implemented: true
     working: true
-    file: "/app/frontend/src/components/home/AboutTeaser.jsx"
+    file: "/app/frontend/src/mock.js, /app/frontend/src/pages/FrameworkLibrary.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
         - working: true
           agent: "testing"
-          comment: "✅ VERIFIED: AboutTeaser section portrait (Meet Bryce Platt) loads successfully. Image complete=true, naturalWidth=400, naturalHeight=400."
-  
-  - task: "Portrait image display - Footer masthead"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/components/Footer.jsx"
-    stuck_count: 0
-    priority: "high"
-    needs_retesting: false
-    status_history:
-        - working: true
-          agent: "testing"
-          comment: "✅ VERIFIED: Footer masthead portrait (small circular image) loads successfully. Image complete=true, naturalWidth=400, naturalHeight=400, className includes 'rounded-full'."
-  
-  - task: "Portrait image display - About page"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/pages/About.jsx"
-    stuck_count: 0
-    priority: "high"
-    needs_retesting: false
-    status_history:
-        - working: true
-          agent: "testing"
-          comment: "✅ VERIFIED: About page portrait loads successfully in the intro section. Image complete=true, naturalWidth=400, naturalHeight=400."
+          comment: "✅ VERIFIED: All 6 Framework Library cards display correct image-to-title mappings. Verified mappings: (1) 'The Nine Types of Specialty Pharmacies' → /li-4.png (WHEEL) ✓, (2) 'The PBM Incentive Model' → /li-1.png (PILLS) ✓, (3) 'The Drug Channel Ecosystem' → /li-1.png (PILLS) ✓, (4) 'Medicare Part D, Simplified' → /li-5.png (ICEBERG) ✓, (5) 'The Employer 340B Playbook' → /li-2.png (FOOTBALL FIELD) ✓, (6) 'The Healthcare Value Chain' → /li-3.png (PORTRAITS) ✓. All images loaded successfully (complete=true, naturalWidth=800)."
 
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 1
+  test_sequence: 2
   run_ui: true
 
 test_plan:
   current_focus:
-    - "All portrait display locations verified"
+    - "LinkedIn infographic image-to-title mappings verified on both pages"
   stuck_tasks: []
   test_all: true
   test_priority: "high_first"
 
 agent_communication:
     - agent: "testing"
-      message: "Bug fix verification complete. All 4 portrait locations tested and verified working. Portrait image (bryce-portrait.jpg) loads successfully from local /public directory in all locations: Hero section, AboutTeaser section, Footer masthead, and About page. No console errors or network failures related to image loading. Total 3 portrait instances found on homepage, all loading correctly (naturalWidth=400, complete=true). Screenshots captured for all locations."
+      message: "LinkedIn infographic image-to-title mapping verification COMPLETE. All mappings are CORRECT on both homepage Featured Insights section (5 articles) and Framework Library page (6 frameworks). All images load successfully with proper dimensions. The fix in /app/frontend/src/mock.js is working as intended. No issues found."

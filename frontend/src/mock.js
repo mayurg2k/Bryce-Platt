@@ -17,6 +17,12 @@ export const authorityStats = [
 ];
 
 // Real LinkedIn infographics served locally from /public
+// Image mapping (verified):
+//   /li-1.png = Hard Pills to Swallow (Drug Channel)
+//   /li-2.png = Employer 340B Playbook
+//   /li-3.png = Six Employer Reactions to GLP-1 Coverage
+//   /li-4.png = Nine Types of Specialty Pharmacies (wheel)
+//   /li-5.png = Drug Out-of-Pocket Costs / Policy Attention (iceberg)
 export const featuredInsights = [
   {
     id: "drug-out-of-pocket-policy-attention",
@@ -25,7 +31,7 @@ export const featuredInsights = [
     date: "July 12, 2025",
     title: "Which Drug Out-of-Pocket Costs Actually Receive Policy Attention",
     summary: "Insulin dominates the debate, but GLP-1s, oncology, autoimmune, dermatologicals, migraine, and MS carry equally severe out-of-pocket burdens. Here is the iceberg beneath the headlines.",
-    image: "/li-1.png",
+    image: "/li-5.png",
   },
   {
     id: "nine-specialty-pharmacies",
@@ -34,7 +40,7 @@ export const featuredInsights = [
     date: "July 8, 2025",
     title: "The Nine Types of Specialty Pharmacies, Explained",
     summary: "Business models, ownership structures, and channel strategies mapped as one framework — PBM-owned, health-plan-owned, health-system, retail, mail, manufacturer, independent, 340B, and niche.",
-    image: "/li-2.png",
+    image: "/li-4.png",
   },
   {
     id: "employer-glp1-reactions",
@@ -52,7 +58,7 @@ export const featuredInsights = [
     date: "June 27, 2025",
     title: "The Employer 340B Playbook",
     summary: "Five plays employers can run to protect against 340B leakage — fix the PBM contract, control pharmacy network, optimize formulary, avoid shared savings, and track the right metrics.",
-    image: "/li-4.png",
+    image: "/li-2.png",
   },
   {
     id: "hard-pills-to-swallow",
@@ -61,7 +67,7 @@ export const featuredInsights = [
     date: "June 21, 2025",
     title: "Six Hard Pills to Swallow for the Drug Channel",
     summary: "Lower list prices will not guarantee better access. PBMs will not work for free. Plan sponsors will not cover every treatment. The uncomfortable realities behind reform.",
-    image: "/li-5.png",
+    image: "/li-1.png",
   },
   {
     id: "medicare-part-d-redesign-2025",
@@ -70,7 +76,7 @@ export const featuredInsights = [
     date: "June 15, 2025",
     title: "Medicare Part D Redesign: What Actually Changed for Beneficiaries and Plans",
     summary: "The $2,000 out-of-pocket cap reshapes plan liability, manufacturer discounts, and formulary strategy. Here is the incentive map behind the headlines.",
-    image: "/li-1.png",
+    image: "/li-5.png",
   },
 ];
 
@@ -128,7 +134,7 @@ export const frameworks = [
     title: "The Nine Types of Specialty Pharmacies",
     summary: "Separate the business models, ownership structures, and distribution strategies that define modern specialty pharmacy.",
     tags: ["Specialty", "Business Models", "Distribution"],
-    image: "/li-2.png",
+    image: "/li-4.png",
   },
   {
     id: "pbm-incentive-model",
@@ -136,7 +142,7 @@ export const frameworks = [
     title: "The PBM Incentive Model",
     summary: "Rebates, spread, DIR fees, and vertical integration mapped as one incentive architecture.",
     tags: ["PBMs", "Incentives", "Rebates"],
-    image: "/li-5.png",
+    image: "/li-1.png",
   },
   {
     id: "drug-channel-ecosystem",
@@ -152,7 +158,7 @@ export const frameworks = [
     title: "Medicare Part D, Simplified",
     summary: "Deductible, initial coverage, catastrophic, and manufacturer discount phases redrawn for 2025 and beyond.",
     tags: ["Medicare", "Part D", "IRA"],
-    image: "/li-3.png",
+    image: "/li-5.png",
   },
   {
     id: "employer-340b-playbook",
@@ -160,7 +166,7 @@ export const frameworks = [
     title: "The Employer 340B Playbook",
     summary: "Five plays for self-insured employers to protect against 340B leakage and preserve pharmacy value.",
     tags: ["Employer", "340B", "Strategy"],
-    image: "/li-4.png",
+    image: "/li-2.png",
   },
   {
     id: "healthcare-value-chain",
@@ -168,7 +174,7 @@ export const frameworks = [
     title: "The Healthcare Value Chain",
     summary: "From payer to provider to end-consumer — who assumes risk, who captures margin, and where value leaks.",
     tags: ["Strategy", "Value"],
-    image: "/li-5.png",
+    image: "/li-3.png",
   },
 ];
 
@@ -180,7 +186,7 @@ export const publications = [
     title: "The 2025 Economic Report on U.S. Pharmacies and Pharmacy Benefit Managers",
     summary: "An in-depth analysis of the largest pharmacies, PBMs, and their evolving market positions across specialty and mail channels.",
     tags: ["Annual Report", "PBMs", "Pharmacy"],
-    image: "/li-2.png",
+    image: "/li-1.png",
   },
   {
     id: "specialty-pharmacy-report",
