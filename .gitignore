@@ -80,9 +80,8 @@ memory/test_credentials.md
 
 # Mobile development
 android-sdk/
-.env
-.env.*
-*.env
+# Env files are tracked for Emergent deployment (contain only non-sensitive config)
+# Do NOT ignore .env / .env.* / *.env
 credentials.json
 *.key
 .credentials
