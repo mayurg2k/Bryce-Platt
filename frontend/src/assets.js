@@ -1,2 +1,2 @@
-// Central asset paths
-export const PORTRAIT = "https://customer-assets.emergentagent.com/job_drug-channels-hub/artifacts/8pzsjlo6_bryce%20portrait.jpeg";
+// Central asset paths - portrait served locally from /public for reliable delivery
+export const PORTRAIT = "/bryce-portrait.jpg";
