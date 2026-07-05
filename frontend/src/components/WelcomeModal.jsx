@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Dialog, DialogContent } from "./ui/dialog";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, X, Sparkles, Clock, ShieldCheck } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
 
 export default function WelcomeModal({ open, onClose }) {
@@ -22,14 +22,21 @@ export default function WelcomeModal({ open, onClose }) {
             <X className="w-5 h-5" />
           </button>
           <div className="p-10 lg:p-14">
-            <div className="eyebrow">The Drug Channels Brief</div>
+            <div className="eyebrow">The Drug Channels Brief · Vol. IX</div>
             <h2 className="font-serif text-3xl lg:text-5xl mt-4 leading-[1.05] ink">
               Stay ahead of U.S.<br/>drug channels.
             </h2>
             <p className="ink-muted mt-5 max-w-md text-[15px] leading-relaxed">
-              Join thousands of healthcare professionals receiving practical insights on pharmacy economics, PBMs, Medicare, specialty pharmacy, and healthcare policy — delivered weekly.
+              One concise briefing. Delivered regularly. Helping healthcare leaders understand pharmacy economics, PBMs, Medicare, reimbursement, specialty pharmacy, and healthcare policy.
             </p>
-            <form onSubmit={submit} className="mt-8 flex flex-col sm:flex-row gap-3">
+
+            <ul className="mt-6 space-y-2.5 text-sm ink">
+              <li className="flex items-center gap-2.5"><Sparkles className="w-3.5 h-3.5 ink-muted" /> One idea per week, unpacked with clarity</li>
+              <li className="flex items-center gap-2.5"><Clock className="w-3.5 h-3.5 ink-muted" /> 5–10 minute read, written for busy executives</li>
+              <li className="flex items-center gap-2.5"><ShieldCheck className="w-3.5 h-3.5 ink-muted" /> Evidence-based. No spam. Unsubscribe anytime.</li>
+            </ul>
+
+            <form onSubmit={submit} className="mt-7 flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 value={email}

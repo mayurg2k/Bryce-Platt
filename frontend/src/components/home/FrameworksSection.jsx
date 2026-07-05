@@ -31,32 +31,32 @@ export default function FrameworksSection() {
             <Reveal key={f.id} delay={i * 70}>
               <Link
                 to="/frameworks"
-                className="group relative block border border-[#1e3556] p-8 overflow-hidden transition-all duration-500 hover:border-[#F6F1E7] hover:-translate-y-1"
+                className="group relative block border border-[#1e3556] overflow-hidden bg-[#0B1C33] transition-all duration-500 hover:border-[#F6F1E7] hover:-translate-y-1.5 hover:shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)]"
               >
-                {/* Hover fill sweep */}
-                <span aria-hidden className="absolute inset-0 bg-[#F6F1E7] origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
-                {/* Corner marks */}
-                <span aria-hidden className="absolute top-3 left-3 w-3 h-3 border-t border-l border-[#3a4d6b] group-hover:border-[#0B1C33] transition-colors" />
-                <span aria-hidden className="absolute top-3 right-3 w-3 h-3 border-t border-r border-[#3a4d6b] group-hover:border-[#0B1C33] transition-colors" />
-                <span aria-hidden className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-[#3a4d6b] group-hover:border-[#0B1C33] transition-colors" />
-                <span aria-hidden className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-[#3a4d6b] group-hover:border-[#0B1C33] transition-colors" />
-
-                <div className="relative">
+                <div className="aspect-[4/3] overflow-hidden bg-[#0F2340] relative border-b border-[#1e3556]">
+                  <img
+                    src={f.image}
+                    alt={f.title}
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+                  />
+                  <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0B1C33] via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
+                </div>
+                <div className="p-7 relative">
                   <div className="flex items-start justify-between">
-                    <span className="font-mono-editorial text-xs text-[#8697b3] group-hover:text-[#4A5A72] transition-colors">{f.number}</span>
-                    <LayoutGrid className="w-5 h-5 text-[#8697b3] group-hover:text-[#0B1C33] transition-colors" />
+                    <span className="font-mono-editorial text-xs text-[#8697b3]">Framework {f.number}</span>
+                    <LayoutGrid className="w-4 h-4 text-[#8697b3] group-hover:text-[#F6F1E7] transition-colors" />
                   </div>
-                  <h3 className="font-serif text-2xl lg:text-[26px] mt-8 leading-snug text-[#F6F1E7] group-hover:text-[#0B1C33] transition-colors">
+                  <h3 className="font-serif text-xl lg:text-[22px] mt-4 leading-snug text-[#F6F1E7]">
                     {f.title}
                   </h3>
-                  <p className="mt-4 text-sm text-[#B7C3D5] group-hover:text-[#4A5A72] leading-relaxed transition-colors">{f.summary}</p>
-                  <div className="mt-8 pt-6 border-t border-[#1e3556] group-hover:border-[#D8CFBE] flex items-center justify-between transition-colors">
-                    <div className="flex flex-wrap gap-2">
-                      {f.tags.map((t) => (
-                        <span key={t} className="text-[10px] px-2 py-1 border border-[#1e3556] text-[#B7C3D5] group-hover:border-[#0B1C33]/30 group-hover:text-[#0B1C33] transition-colors">{t}</span>
+                  <p className="mt-3 text-sm text-[#B7C3D5] leading-relaxed line-clamp-2">{f.summary}</p>
+                  <div className="mt-6 pt-5 border-t border-[#1e3556] flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1.5">
+                      {f.tags.slice(0, 2).map((t) => (
+                        <span key={t} className="text-[10px] px-2 py-0.5 border border-[#1e3556] text-[#B7C3D5]">{t}</span>
                       ))}
                     </div>
-                    <ArrowUpRight className="w-4 h-4 text-[#B7C3D5] group-hover:text-[#0B1C33] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                    <ArrowUpRight className="w-4 h-4 text-[#B7C3D5] group-hover:text-[#F6F1E7] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                   </div>
                 </div>
               </Link>

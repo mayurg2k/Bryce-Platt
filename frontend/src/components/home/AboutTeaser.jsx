@@ -18,7 +18,7 @@ export default function AboutTeaser() {
               />
               <div className="absolute -bottom-6 -right-6 bg-[#F6F1E7] border border-[#D8CFBE] p-4 max-w-[240px] shadow-lg">
                 <Quote className="w-5 h-5 ink-muted" />
-                <p className="font-serif ink mt-2 text-sm leading-snug italic">“Explain the incentives, and the market makes sense.”</p>
+                <p className="font-serif ink mt-2 text-sm leading-snug italic">&ldquo;Explain the incentives, and the market makes sense.&rdquo;</p>
               </div>
             </div>
           </Reveal>

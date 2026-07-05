@@ -26,8 +26,8 @@ export default function FeaturedInsights() {
         <div className="grid lg:grid-cols-12 gap-10">
           <Reveal delay={120} className="lg:col-span-7">
             <Link to={`/insights/${hero.id}`} className="group card-hover block">
-              <div className="relative overflow-hidden">
-                <img src={hero.image} alt={hero.title} className="w-full aspect-[16/10] object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+              <div className="relative overflow-hidden bg-[#EFE7D5] aspect-[16/10] flex items-center justify-center border border-[#D8CFBE]">
+                <img src={hero.image} alt={hero.title} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
                 <div className="absolute top-4 left-4 bg-[#F6F1E7] px-3 py-1 text-[10px] font-mono-editorial tracking-widest ink">FEATURED</div>
               </div>
               <div className="mt-6 flex items-center gap-4 text-xs">
@@ -39,6 +39,9 @@ export default function FeaturedInsights() {
                 {hero.title}
               </h3>
               <p className="ink-muted mt-4 max-w-2xl leading-relaxed">{hero.summary}</p>
+              <div className="mt-5 inline-flex items-center gap-2 text-sm ink font-medium">
+                Read Analysis <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </div>
             </Link>
           </Reveal>
 
@@ -46,13 +49,16 @@ export default function FeaturedInsights() {
             <div className="flex flex-col divide-y divide-[#D8CFBE]">
               {rest.slice(0, 4).map((a) => (
                 <Link to={`/insights/${a.id}`} key={a.id} className="group py-6 flex gap-5 first:pt-0 last:pb-0 hover:pl-2 transition-[padding] duration-500">
-                  <img src={a.image} alt="" className="w-28 h-28 object-cover flex-shrink-0 grayscale-[10%]" />
+                  <div className="w-28 h-28 flex-shrink-0 bg-[#EFE7D5] border border-[#D8CFBE] overflow-hidden">
+                    <img src={a.image} alt="" className="w-full h-full object-cover" />
+                  </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 text-[11px]">
                       <span className="eyebrow ink">{a.category}</span>
                       <span className="font-mono-editorial ink-muted">{a.readTime}</span>
                     </div>
                     <h4 className="font-serif text-lg mt-2 ink leading-snug group-hover:opacity-70 transition-opacity">{a.title}</h4>
+                    <div className="mt-2 text-[11px] ink-muted">Read Analysis →</div>
                   </div>
                 </Link>
               ))}

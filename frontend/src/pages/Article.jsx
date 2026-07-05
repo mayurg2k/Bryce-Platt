@@ -89,9 +89,11 @@ export default function Article() {
       {/* Hero image */}
       <Reveal delay={200}>
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
-          <img src={article.image} alt="" className="w-full aspect-[16/8] object-cover shadow-[0_30px_60px_-30px_rgba(11,28,51,0.4)]" />
+          <div className="w-full bg-[#EFE7D5] border border-[#D8CFBE] shadow-[0_30px_60px_-30px_rgba(11,28,51,0.4)] flex items-center justify-center p-4 md:p-8">
+            <img src={article.image} alt="" className="max-h-[540px] w-auto max-w-full object-contain" />
+          </div>
           <div className="mt-3 flex items-center justify-between text-[11px]">
-            <div className="font-mono-editorial ink-muted">Fig. — Editorial illustration</div>
+            <div className="font-mono-editorial ink-muted">Fig. — Original framework by Bryce Platt</div>
             <div className="flex items-center gap-3">
               <button onClick={copyLink} className="inline-flex items-center gap-1.5 ink-muted hover:ink text-xs"><LinkIcon className="w-3.5 h-3.5" /> Copy link</button>
               <button className="inline-flex items-center gap-1.5 ink-muted hover:ink text-xs"><Bookmark className="w-3.5 h-3.5" /> Save</button>
@@ -196,11 +198,35 @@ export default function Article() {
           <div className="grid md:grid-cols-3 gap-6">
             {moreArticles.map((a) => (
               <Link to={`/insights/${a.id}`} key={a.id} className="group block card-hover">
-                <img src={a.image} alt="" className="w-full aspect-[4/3] object-cover" />
+                <div className="overflow-hidden bg-[#EFE7D5] aspect-[4/3]">
+                  <img src={a.image} alt="" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                </div>
                 <div className="mt-4 flex items-center gap-3 text-[11px]"><span className="eyebrow ink">{a.category}</span><span className="font-mono-editorial ink-muted">{a.readTime}</span></div>
                 <h3 className="font-serif text-xl ink mt-2 leading-snug group-hover:opacity-70 transition-opacity">{a.title}</h3>
+                <div className="mt-3 inline-flex items-center gap-1.5 text-xs ink">Read Analysis <ArrowUpRight className="w-3.5 h-3.5" /></div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* End-of-article Newsletter CTA */}
+      <section className="paper-dark py-24">
+        <div className="max-w-[900px] mx-auto px-6 lg:px-10 text-center">
+          <div className="eyebrow text-[#B7C3D5]">The Drug Channels Brief</div>
+          <h2 className="font-serif text-4xl lg:text-6xl leading-[1.02] mt-5 text-[#F6F1E7] editorial-heading">
+            Enjoyed this analysis?
+          </h2>
+          <p className="mt-5 text-[#B7C3D5] text-lg max-w-xl mx-auto leading-relaxed">
+            Get one framework-driven briefing like this one delivered every week. Read by 37,000+ healthcare leaders.
+          </p>
+          <div className="mt-8 flex justify-center gap-3 flex-wrap">
+            <Link to="/newsletter" className="inline-flex items-center gap-2 bg-[#F6F1E7] text-[#0B1C33] px-7 py-4 text-sm tracking-wide hover:bg-white transition-colors">
+              Subscribe to the Newsletter <ArrowUpRight className="w-4 h-4" />
+            </Link>
+            <Link to="/frameworks" className="inline-flex items-center gap-2 border border-[#F6F1E7] px-7 py-4 text-sm tracking-wide text-[#F6F1E7] hover:bg-[#F6F1E7] hover:text-[#0B1C33] transition-colors">
+              Browse Frameworks
+            </Link>
           </div>
         </div>
       </section>

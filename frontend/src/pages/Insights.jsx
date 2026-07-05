@@ -43,8 +43,8 @@ export default function Insights() {
             {list.map((a, i) => (
               <Reveal key={a.id} delay={i * 50}>
                 <Link to={`/insights/${a.id}`} className="group card-hover block">
-                  <div className="overflow-hidden">
-                    <img src={a.image} alt={a.title} className="w-full aspect-[4/3] object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                  <div className="overflow-hidden bg-[#EFE7D5] border border-[#D8CFBE] aspect-[4/3]">
+                    <img src={a.image} alt={a.title} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
                   </div>
                   <div className="mt-5 flex items-center gap-3 text-[11px]">
                     <span className="eyebrow ink">{a.category}</span>
@@ -54,7 +54,7 @@ export default function Insights() {
                   <h3 className="font-serif text-2xl mt-3 ink leading-tight group-hover:opacity-70">{a.title}</h3>
                   <p className="ink-muted text-sm mt-3 leading-relaxed">{a.summary}</p>
                   <div className="mt-4 inline-flex items-center gap-2 ink text-sm">
-                    Read article <ArrowUpRight className="w-4 h-4" />
+                    Read Analysis <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </Link>
               </Reveal>

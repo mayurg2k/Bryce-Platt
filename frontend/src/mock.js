@@ -16,60 +16,61 @@ export const authorityStats = [
   { label: "Annual Content Impressions", value: "12M+", sub: "Across healthcare leadership" },
 ];
 
+// Real LinkedIn infographics served locally from /public
 export const featuredInsights = [
   {
-    id: "medicare-part-d-redesign-2025",
-    category: "Medicare",
+    id: "drug-out-of-pocket-policy-attention",
+    category: "Drug Pricing",
     readTime: "9 min read",
     date: "July 12, 2025",
-    title: "Medicare Part D Redesign: What Actually Changed for Beneficiaries and Plans",
-    summary: "The $2,000 out-of-pocket cap reshapes plan liability, manufacturer discounts, and formulary strategy. Here is the incentive map behind the headlines.",
-    image: "https://images.unsplash.com/photo-1708685627299-81bfac32402d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwzfHxoZWFsdGhjYXJlJTIwZWNvbm9taWNzfGVufDB8fHx8MTc4MzIwMzkwOXww&ixlib=rb-4.1.0&q=85",
+    title: "Which Drug Out-of-Pocket Costs Actually Receive Policy Attention",
+    summary: "Insulin dominates the debate, but GLP-1s, oncology, autoimmune, dermatologicals, migraine, and MS carry equally severe out-of-pocket burdens. Here is the iceberg beneath the headlines.",
+    image: "/li-1.png",
   },
   {
-    id: "pbm-transparency-reform",
-    category: "PBMs",
-    readTime: "11 min read",
+    id: "nine-specialty-pharmacies",
+    category: "Specialty Pharmacy",
+    readTime: "13 min read",
     date: "July 8, 2025",
-    title: "Why PBM Transparency Reform Rarely Lowers Drug Prices",
-    summary: "Spread pricing, rebates, and vertical integration create a system where transparency alone cannot shift incentives. Follow the money instead.",
-    image: "https://images.unsplash.com/photo-1690783782198-e3815ed6aac0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZWNvbm9taWNzfGVufDB8fHx8MTc4MzIwMzkwOXww&ixlib=rb-4.1.0&q=85",
+    title: "The Nine Types of Specialty Pharmacies, Explained",
+    summary: "Business models, ownership structures, and channel strategies mapped as one framework — PBM-owned, health-plan-owned, health-system, retail, mail, manufacturer, independent, 340B, and niche.",
+    image: "/li-2.png",
   },
   {
-    id: "glp1-employer-strategy",
+    id: "employer-glp1-reactions",
     category: "Employer Benefits",
     readTime: "7 min read",
     date: "July 3, 2025",
-    title: "The GLP-1 Employer Dilemma: Coverage, Cost, and Long-Term Value",
-    summary: "Employers face a compounding cost curve on obesity therapies. The strategic question is not whether to cover, but how to structure access.",
-    image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxwaGFybWFjeSUyMG1lZGljaW5lfGVufDB8fHx8MTc4MzIwMzkwOXww&ixlib=rb-4.1.0&q=85",
+    title: "Six Employer Reactions to Obesity GLP-1 Coverage",
+    summary: "From full coverage to never-cover, six distinct employer archetypes are shaping GLP-1 access. Each requires a different strategic response.",
+    image: "/li-3.png",
   },
   {
-    id: "specialty-pharmacy-nine-types",
-    category: "Specialty Pharmacy",
-    readTime: "13 min read",
-    date: "June 27, 2025",
-    title: "The Nine Types of Specialty Pharmacies, Explained",
-    summary: "Not every specialty pharmacy is the same. This framework separates business models, ownership structures, and channel strategies.",
-    image: "https://images.unsplash.com/photo-1702306946700-4cae9f2dfe82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHw0fHxoZWFsdGhjYXJlJTIwZWNvbm9taWNzfGVufDB8fHx8MTc4MzIwMzkwOXww&ixlib=rb-4.1.0&q=85",
-  },
-  {
-    id: "340b-drift",
+    id: "employer-340b-playbook",
     category: "340B",
+    readTime: "10 min read",
+    date: "June 27, 2025",
+    title: "The Employer 340B Playbook",
+    summary: "Five plays employers can run to protect against 340B leakage — fix the PBM contract, control pharmacy network, optimize formulary, avoid shared savings, and track the right metrics.",
+    image: "/li-4.png",
+  },
+  {
+    id: "hard-pills-to-swallow",
+    category: "Drug Channels",
     readTime: "8 min read",
     date: "June 21, 2025",
-    title: "340B Program Drift: Why the Debate Keeps Getting Louder",
-    summary: "Contract pharmacies, manufacturer restrictions, and hospital economics collide. The program has outgrown its original safety-net mandate.",
-    image: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxwaGFybWFjeSUyMG1lZGljaW5lfGVufDB8fHx8MTc4MzIwMzkwOXww&ixlib=rb-4.1.0&q=85",
+    title: "Six Hard Pills to Swallow for the Drug Channel",
+    summary: "Lower list prices will not guarantee better access. PBMs will not work for free. Plan sponsors will not cover every treatment. The uncomfortable realities behind reform.",
+    image: "/li-5.png",
   },
   {
-    id: "drug-pricing-ecosystem",
-    category: "Drug Pricing",
-    readTime: "10 min read",
+    id: "medicare-part-d-redesign-2025",
+    category: "Medicare",
+    readTime: "11 min read",
     date: "June 15, 2025",
-    title: "The Real Anatomy of a U.S. Drug Price",
-    summary: "List price. Net price. WAC. AWP. NADAC. A practical map of how a single prescription generates a dozen different prices along the way.",
-    image: "https://images.pexels.com/photos/51929/medications-cure-tablets-pharmacy-51929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    title: "Medicare Part D Redesign: What Actually Changed for Beneficiaries and Plans",
+    summary: "The $2,000 out-of-pocket cap reshapes plan liability, manufacturer discounts, and formulary strategy. Here is the incentive map behind the headlines.",
+    image: "/li-1.png",
   },
 ];
 
@@ -87,7 +88,7 @@ export const articleBody = [
     id: "framework",
     heading: "The Framework",
     content: [
-      "Consider a simple two-lens view. Lens one: the flow of product, from manufacturer to patient. Lens two: the flow of dollars, which frequently moves in the opposite direction. Where these two lenses diverge is exactly where value leaks and where reform proposals typically miss their target.",
+      "Consider a simple two-lens view. Lens one: the flow of product, from manufacturer to the end consumer. Lens two: the flow of dollars, which frequently moves in the opposite direction. Where these two lenses diverge is exactly where value leaks and where reform proposals typically miss their target.",
       "In practice, this means most 'transparency' bills disclose the mechanics of dollar flow without changing the underlying incentive to steer product toward higher-rebate SKUs. The result is more paperwork, similar outcomes.",
     ],
   },
@@ -127,6 +128,7 @@ export const frameworks = [
     title: "The Nine Types of Specialty Pharmacies",
     summary: "Separate the business models, ownership structures, and distribution strategies that define modern specialty pharmacy.",
     tags: ["Specialty", "Business Models", "Distribution"],
+    image: "/li-2.png",
   },
   {
     id: "pbm-incentive-model",
@@ -134,13 +136,15 @@ export const frameworks = [
     title: "The PBM Incentive Model",
     summary: "Rebates, spread, DIR fees, and vertical integration mapped as one incentive architecture.",
     tags: ["PBMs", "Incentives", "Rebates"],
+    image: "/li-5.png",
   },
   {
     id: "drug-channel-ecosystem",
     number: "03",
     title: "The Drug Channel Ecosystem",
-    summary: "Manufacturers, wholesalers, pharmacies, PBMs, payers, and patients — the full circulatory system of pharmacy.",
+    summary: "Manufacturers, wholesalers, pharmacies, PBMs, payers, and beneficiaries — the full circulatory system of pharmacy.",
     tags: ["Drug Channels", "Supply Chain"],
+    image: "/li-1.png",
   },
   {
     id: "medicare-part-d-simplified",
@@ -148,20 +152,23 @@ export const frameworks = [
     title: "Medicare Part D, Simplified",
     summary: "Deductible, initial coverage, catastrophic, and manufacturer discount phases redrawn for 2025 and beyond.",
     tags: ["Medicare", "Part D", "IRA"],
+    image: "/li-3.png",
   },
   {
-    id: "drug-pricing-ecosystem-framework",
+    id: "employer-340b-playbook",
     number: "05",
-    title: "The Drug Pricing Ecosystem",
-    summary: "How WAC, AWP, NADAC, net price, and out-of-pocket cost relate — and where the gaps really are.",
-    tags: ["Pricing", "Reimbursement"],
+    title: "The Employer 340B Playbook",
+    summary: "Five plays for self-insured employers to protect against 340B leakage and preserve pharmacy value.",
+    tags: ["Employer", "340B", "Strategy"],
+    image: "/li-4.png",
   },
   {
     id: "healthcare-value-chain",
     number: "06",
     title: "The Healthcare Value Chain",
-    summary: "From payer to provider to patient — who assumes risk, who captures margin, and where value leaks.",
+    summary: "From payer to provider to end-consumer — who assumes risk, who captures margin, and where value leaks.",
     tags: ["Strategy", "Value"],
+    image: "/li-5.png",
   },
 ];
 
@@ -173,6 +180,7 @@ export const publications = [
     title: "The 2025 Economic Report on U.S. Pharmacies and Pharmacy Benefit Managers",
     summary: "An in-depth analysis of the largest pharmacies, PBMs, and their evolving market positions across specialty and mail channels.",
     tags: ["Annual Report", "PBMs", "Pharmacy"],
+    image: "/li-2.png",
   },
   {
     id: "specialty-pharmacy-report",
@@ -181,6 +189,7 @@ export const publications = [
     title: "The 2024 Economic Report on U.S. Specialty Pharmacies",
     summary: "Business models, ownership concentration, and the emerging channel dynamics reshaping specialty distribution.",
     tags: ["Specialty", "Distribution"],
+    image: "/li-4.png",
   },
   {
     id: "milliman-benefit-design",
@@ -189,6 +198,7 @@ export const publications = [
     title: "Employer Pharmacy Benefit Design Under Rising Specialty Cost",
     summary: "A structured approach to specialty benefit management for self-insured employers navigating trend pressure.",
     tags: ["Employer", "Benefit Design"],
+    image: "/li-3.png",
   },
 ];
 
@@ -212,12 +222,12 @@ export const speakingEngagements = [
 ];
 
 export const timeline = [
-  { year: "2010", label: "University of Kansas", detail: "Doctor of Pharmacy (PharmD)" },
-  { year: "2014", label: "Independent Pharmacy", detail: "Community pharmacy operations & patient care" },
-  { year: "2016", label: "Population Health", detail: "Managed care and outcomes analytics" },
-  { year: "2019", label: "Milliman", detail: "Healthcare consulting, PBM strategy, health economics" },
-  { year: "2023", label: "Drug Channels Institute", detail: "Director — Research and executive education" },
-  { year: "2025", label: "Thought Leadership", detail: "37,000+ followers, daily educational insights, 4+ year streak" },
+  { year: "2010", label: "University of Kansas", detail: "Doctor of Pharmacy (PharmD)", code: "KU" },
+  { year: "2014", label: "Independent Pharmacy", detail: "Community pharmacy operations and member care", code: "IP" },
+  { year: "2016", label: "Population Health", detail: "Managed care and outcomes analytics", code: "PH" },
+  { year: "2019", label: "Milliman", detail: "Healthcare consulting, PBM strategy, health economics", code: "MI" },
+  { year: "2023", label: "Drug Channels Institute", detail: "Director — Research and executive education", code: "DCI" },
+  { year: "2025", label: "Thought Leadership", detail: "37,000+ followers, daily educational insights, 4+ year streak", code: "TL" },
 ];
 
 export const values = [
