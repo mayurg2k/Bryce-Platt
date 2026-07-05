@@ -73,6 +73,41 @@ export const featuredInsights = [
   },
 ];
 
+// Article body sections (shared across featured articles for demo)
+export const articleBody = [
+  {
+    id: "context",
+    heading: "The Context",
+    content: [
+      "The United States pharmacy benefit landscape is shaped by three vertically-integrated organizations. Together, they touch nearly every prescription filled in America. To understand why reform efforts consistently under-deliver on price, we have to first understand the incentive architecture beneath the policy debate.",
+      "Rebates, spread pricing, formulary placement, and network design are not accidents. They are the deliberate financial mechanisms through which the modern PBM captures margin. Any transparency effort that leaves these mechanisms intact will inevitably rearrange — rather than reduce — total drug spend.",
+    ],
+  },
+  {
+    id: "framework",
+    heading: "The Framework",
+    content: [
+      "Consider a simple two-lens view. Lens one: the flow of product, from manufacturer to patient. Lens two: the flow of dollars, which frequently moves in the opposite direction. Where these two lenses diverge is exactly where value leaks and where reform proposals typically miss their target.",
+      "In practice, this means most 'transparency' bills disclose the mechanics of dollar flow without changing the underlying incentive to steer product toward higher-rebate SKUs. The result is more paperwork, similar outcomes.",
+    ],
+  },
+  {
+    id: "implications",
+    heading: "The Implications",
+    content: [
+      "Health plans, employer purchasers, and policymakers evaluating PBM reform should pressure-test proposals against a single question: does this change the direction of the money, or merely its visibility? If the answer is 'visibility only,' the reform is unlikely to lower net cost.",
+      "The most effective reforms redirect the manufacturer discount into the point-of-sale transaction, delink PBM revenue from list price, or unbundle the fiduciary role from the negotiating role. Each of these carries operational trade-offs that deserve serious debate.",
+    ],
+  },
+  {
+    id: "what-next",
+    heading: "What to Watch Next",
+    content: [
+      "Three signals to track over the next four quarters: (1) point-of-sale rebate legislation activity at the state level, (2) health-plan carve-out momentum among self-insured employers, and (3) the FTC follow-through on its 6(b) study. Each represents a distinct pathway through which incentives could meaningfully shift.",
+    ],
+  },
+];
+
 export const topics = [
   { name: "Drug Channels", count: 42, description: "How money, product, and incentives move through the supply chain." },
   { name: "PBMs", count: 38, description: "Pharmacy benefit manager economics, contracting, and reform." },

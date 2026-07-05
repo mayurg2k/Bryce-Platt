@@ -9,6 +9,7 @@ import Newsletter from "./pages/Newsletter";
 import Speaking from "./pages/Speaking";
 import Contact from "./pages/Contact";
 import Research from "./pages/Research";
+import Article from "./pages/Article";
 import SiteChrome from "./components/SiteChrome";
 import { Toaster } from "./components/ui/toaster";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:id" element={<Article />} />
             <Route path="/frameworks" element={<FrameworkLibrary />} />
             <Route path="/research" element={<Research />} />
             <Route path="/newsletter" element={<Newsletter />} />

@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { featuredInsights, topics } from "../mock";
 import { ArrowUpRight } from "lucide-react";
+import Reveal from "../components/Reveal";
 
 const filters = ["All", ...topics.map((t) => t.name)];
 
@@ -38,22 +40,24 @@ export default function Insights() {
           </div>
 
           <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {list.map((a) => (
-              <article key={a.id} className="group card-hover">
-                <div className="overflow-hidden">
-                  <img src={a.image} alt={a.title} className="w-full aspect-[4/3] object-cover group-hover:scale-[1.02] transition-transform duration-700" />
-                </div>
-                <div className="mt-5 flex items-center gap-3 text-[11px]">
-                  <span className="eyebrow ink">{a.category}</span>
-                  <span className="hairline flex-1" />
-                  <span className="font-mono-editorial ink-muted">{a.readTime}</span>
-                </div>
-                <h3 className="font-serif text-2xl mt-3 ink leading-tight group-hover:opacity-70">{a.title}</h3>
-                <p className="ink-muted text-sm mt-3 leading-relaxed">{a.summary}</p>
-                <div className="mt-4 inline-flex items-center gap-2 ink text-sm">
-                  Read article <ArrowUpRight className="w-4 h-4" />
-                </div>
-              </article>
+            {list.map((a, i) => (
+              <Reveal key={a.id} delay={i * 50}>
+                <Link to={`/insights/${a.id}`} className="group card-hover block">
+                  <div className="overflow-hidden">
+                    <img src={a.image} alt={a.title} className="w-full aspect-[4/3] object-cover group-hover:scale-[1.03] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                  </div>
+                  <div className="mt-5 flex items-center gap-3 text-[11px]">
+                    <span className="eyebrow ink">{a.category}</span>
+                    <span className="hairline flex-1" />
+                    <span className="font-mono-editorial ink-muted">{a.readTime}</span>
+                  </div>
+                  <h3 className="font-serif text-2xl mt-3 ink leading-tight group-hover:opacity-70">{a.title}</h3>
+                  <p className="ink-muted text-sm mt-3 leading-relaxed">{a.summary}</p>
+                  <div className="mt-4 inline-flex items-center gap-2 ink text-sm">
+                    Read article <ArrowUpRight className="w-4 h-4" />
+                  </div>
+                </Link>
+              </Reveal>
             ))}
             {list.length === 0 && <p className="ink-muted">No articles in this category yet.</p>}
           </div>

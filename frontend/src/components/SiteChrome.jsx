@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import WelcomeModal from "./WelcomeModal";
+import ScrollProgress from "./ScrollProgress";
 import { useLocation } from "react-router-dom";
 
 export default function SiteChrome({ children }) {
@@ -28,6 +29,7 @@ export default function SiteChrome({ children }) {
 
   return (
     <div className="paper min-h-screen">
+      <ScrollProgress />
       <Header />
       <main>{children}</main>
       <Footer />
